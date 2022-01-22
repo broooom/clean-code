@@ -8,10 +8,10 @@
 - 일반적으로 큰 파일보다 작은 파일이 이해하기 쉽다.
 - 신문 기사처럼 이름은 간단하면서도 설명이 가능하게 짓고 아래로 내려갈수록 의도를 세세하게 묘사한다.
 - 개념은 빈 행으로 구분한다.
-  ```
+  ```java
   public class BoldWidget extends ParentWidget {
-    public static final String REGEXP = "'''.+?''"";
-    private static final Pattern pattern = Pattern.compile("'''(.?+)''"".
+    public static final String REGEXP = "'''.+?'''";
+    private static final Pattern pattern = Pattern.compile("'''(.?+)'''",
       Pattern.MULTILINE + Pattern.DOTALL
     );
   // 개념 사이 빈 행으로 구분하기
@@ -23,7 +23,7 @@
   }
   ```  
 - 줄바꿈이 개념을 분리한다면 세로 밀집도는 연관성을 의미한다. ( 연관성이란? 한 개념을 이해하는 데 다른 개념이 중요한 정도이다.)
-  ```
+  ```java
   public class ReporterConfig {
     private String m_className;
     private List<Property> m_properties = new ArrayList<>();
